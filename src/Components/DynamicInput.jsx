@@ -29,11 +29,8 @@ const DynamicInput = ({
           value={value}
           onChange={(e) => {
             const newValue = Number(e.target.value);
-            if (!isNaN(newValue) && newValue >= 0) {
-              onAmountChange && onAmountChange(newValue); 
-            } else {
-              onAmountChange && onAmountChange(0); 
-            }
+            onAmountChange &&
+              onAmountChange(!isNaN(newValue) && newValue > 0 ? newValue : 0);
           }}
           disabled={amountDisabled}
           id={idForAmountInput}
