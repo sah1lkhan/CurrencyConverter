@@ -3,7 +3,7 @@ import { DynamicInput } from "./Components";
 import useCurrency from "./Hooks/useCurrency";
 
 function App() {
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
