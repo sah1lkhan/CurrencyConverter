@@ -73,7 +73,7 @@ function App() {
                 currencyOptions={options}
                 value={convertedAmount}
                 onCurrencyChange={(currency) => setTo(currency)}
-                onAmountChange={(amount) => setConvertedAmount(amount)}
+                // onAmountChange={(amount) => setConvertedAmount(amount)} NOTE :- NO  NEED FOR THIS LINE CZ ITS CHANGES THROUGH CONVERTED FN NOT HERE
                 currentCurrency={to}
                 amountDisabled
               />
